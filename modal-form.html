@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact us</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <style>
+      * {
+      box-sizing: border-box;
+      }
+      html, body {
+      min-height: 100vh;
+      padding: 0;
+      margin: 0;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 14px; 
+      color: #666;
+      }
+      input, textarea { 
+      outline: none;
+      }
+      body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      background: #5a7233;
+      }
+      h1 {
+      margin-top: 0;
+      font-weight: 500;
+      }
+      form {
+      position: relative;
+      width: 80%;
+      border-radius: 30px;
+      background: #fff;
+      }
+      .form-left-decoration,
+      .form-right-decoration {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 20px;
+      border-radius: 20px;
+      background: #5a7233;
+      }
+      .form-left-decoration {
+      bottom: 60px;
+      left: -30px;
+      }
+      .form-right-decoration {
+      top: 60px;
+      right: -30px;
+      }
+      .form-left-decoration:before,
+      .form-left-decoration:after,
+      .form-right-decoration:before,
+      .form-right-decoration:after {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 20px;
+      border-radius: 30px;
+      background: #fff;
+      }
+      .form-left-decoration:before {
+      top: -20px;
+      }
+      .form-left-decoration:after {
+      top: 20px;
+      left: 10px;
+      }
+      .form-right-decoration:before {
+      top: -20px;
+      right: 0;
+      }
+      .form-right-decoration:after {
+      top: 20px;
+      right: 10px;
+      }
+      .circle {
+      position: absolute;
+      bottom: 80px;
+      left: -55px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #fff;
+      }
+      .form-inner {
+      padding: 40px;
+      }
+      .form-inner input,
+      .form-inner textarea {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 20px;
+      background: #d0dfe8;
+      }
+      .form-inner textarea {
+      resize: none;
+      }
+      button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 20px;
+      border-radius: 20px;
+      border: none;
+      border-bottom: 4px solid #3e4f24;
+      background: #5a7233; 
+      font-size: 16px;
+      font-weight: 400;
+      color: #fff;
+      }
+      button:hover {
+      background: #3e4f24;
+      } 
+      @media (min-width: 568px) {
+      form {
+      width: 60%;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <div class='modal fade' id='myModal' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel'
+    aria-hidden='true'>
+    <div class='modal-dialog modal-dialog-scrollable' role='document'>
+       <div class='modal-content'>
+          <div class='modal-header'>
+             <h3 class='modal-title' id='exampleModalLabel'>Đăng ký</h3>
+             <button class='close' type='button' data-dismiss='modal' aria-label='Close'>
+             <span aria-hidden='true'>×</span></button>
+          </div>
+          <div class='modal-body'>
+             <div class='form-group'><label for='ids'>ID:</label><input runat="server" id="modal_id" class="form-control" required='required'  type="text" placeholder="" readonly></div>
+             <div class='form-group'><label for='name'>Name:<span style="color:red">*</span></label><input runat="server" id="modal_name"  class='form-control firstname' required='required' type='text' name='name'
+                placeholder='Enter first name' /></div>
+             <div class='form-group'><label for='country'>Country:</label><input runat="server" id="modal_country"  class='form-control lastname'  type='text' name='country' placeholder='Enter Country' 
+                /></div>
+             <div class='form-group'><label for='state'>State:</label><input runat="server" id="modal_state"  class='form-control phone'  type='text' name='state' placeholder='Enter State'
+                /></div>
+             <div class='form-group'><label for='street_name'>Street Name:</label><input runat="server" id="modal_street_name"  class='form-control email'  type='text' name='street_name' placeholder='Enter Street Name'
+                /></div>
+             <div class='form-group'><label for='street_number'>Street #:</label><input runat="server" id="modal_street_number"  class='form-control address' type='text' name='street_number' placeholder='Enter Street #'
+                /></div>
+             <div class='form-group'><label for='phone1'>Phone # 1:</label><input runat="server" id="modal_phone_number_1"  class='form-control birthday'  type='text' name='phone1'  placeholder='Enter Phone # 1'
+                /></div>
+             <div class='form-group'><label for='phone2'>Phone # 2:</label><input runat="server" id="modal_phone_number_2"  class='form-control birthday'  type='text' name='phone2'  placeholder='Enter Phone # 2'
+                /></div>
+             <div class='form-group'><label for='email1'>Email 1:</label><input runat="server" id="modal_email_1"  class='form-control birthday'  type='text' name='email1'  placeholder='Enter Email 1'
+                /></div>
+             <div class='form-group'><label for='email2'>Email 2:</label><input runat="server" id="modal_email_2"  class='form-control birthday'  type='text' name='email2'  placeholder='Enter Email 2'
+                /></div>
+             <div class='form-group'><label for='rep_first_name'>Rep First Name:</label><input runat="server" id="modal_rep_first_name"  class='form-control birthday' type='text' name='rep_first_name'   placeholder='Enter Rep First Name'
+                /></div>
+             <div class='form-group'><label for='rep_last_name'>Rep Last Name:</label><input runat="server" id="modal_rep_last_name"  class='form-control birthday' type='text' name='rep_last_name'  placeholder='Enter Rep Last Name'
+                /></div>
+             <div class='form-group'><label for='rep_phone'>Rep Phone #:</label><input runat="server" id="modal_rep_phone_number"  class='form-control birthday'  type='text' name='rep_phone'  placeholder='Enter Rep Phone #'
+                /></div>
+             <div class='form-group'><label for='rep_email'>Rep Email:</label><input runat="server" id="modal_rep_email"  class='form-control birthday'  type='text' name='rep_email'  placeholder='Enter Rep Email'
+                /></div>
+             <div class='form-group'><label for='website'>Website:</label><input runat="server" id="modal_website"  class='form-control birthday' type='text' name='website'  placeholder='Enter Website'
+                /></div>
+             <div class='form-group'><label for='gender' >Active:<span style="color:red">*</span></label>
+                <span  style="color:green"><input runat="server" id="modal_active_true"    required='required'  type='radio' name='Active' value='True' />True</span>
+                <span  style="color:red"><input runat="server" id="modal_active_false"   required='required' type='radio' name='Active' value='False' />False</span>
+             </div>
+             <button class='btn btn-primary btn-save-change'
+                type='submit'>Save changes</button>
+          </div>
+  
+       </div>
+    </div>
+    <!-- <form action="/" class="decor">
+      <div class="form-left-decoration"></div>
+      <div class="form-right-decoration"></div>
+      <div class="circle"></div>
+      <div class="form-inner">
+        <h1>Contact us</h1>
+        <input type="text" placeholder="Username">
+        <input type="email" placeholder="Email">
+        <textarea placeholder="Message..." rows="5"></textarea>
+        <button type="submit" href="/">Submit</button>
+      </div>
+    </form> -->
+  </body>
+</html>
+
+
