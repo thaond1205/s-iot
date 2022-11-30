@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --primary: #06BBCC;
+    --primary: #0303a7;
     --light: #F0FBFC;
     --dark: #181d38;
 }
@@ -434,4 +434,7 @@
     margin-right: 0;
     padding-right: 0;
     border-right: none;
+}
+.text-color {
+    color: rgb(82, 73, 174)
 }
